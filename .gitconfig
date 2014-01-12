@@ -1,0 +1,39 @@
+[user]
+name = Nastya Konak
+email = nastyako@yahoo.com
+[alias]
+st = status -s
+co = checkout
+ci = commit
+b = branch
+p = pull
+a = add
+d = diff
+l = log --graph --pretty=format:"%C(yellow)%h\\ %C(cyan)%ai%C(yellow)%d\\ %C(reset)%s\\ %C(green)[%cn]" --decorate --date=short
+s = show --pretty=format:"%C(yellow)%h\\ %C(cyan)%ad%C(yellow)%d\\ %C(reset)%s\\ %C(green)[%cn]" --decorate --date=short
+conflicts = diff --name-only --diff-filter=U
+dc = diff --cached # see staged changes
+uncommit = reset --soft HEAD~1 # undo last commit
+bl = blame -w
+
+[push]
+default = current
+
+[color]
+ui = true
+
+[color "branch"]
+current = yellow reverse
+local = yellow
+remote = green
+
+[color "diff"]
+meta = yellow bold
+frag = magenta bold
+old = red bold
+new = green
+
+[color "status"]
+added = green
+changed = red
+untracked = cyan
